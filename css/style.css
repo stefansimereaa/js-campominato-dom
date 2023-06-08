@@ -1,0 +1,79 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cols: 10;
+}
+
+body{
+    background-color: #7fffd4 ;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+}
+
+#play{
+    border: none;
+    background-color: #7fffd4;
+    border-radius: 20px;
+    padding: 20px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#levels{
+    padding: 20px;
+    width: 150px;
+    background-color: #7fffd4;
+    border: none;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#grid{
+    width: 1000px;
+    height: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid .cell{
+    height: calc(100% / var(--cols));
+    flex-basis: calc(100% / var(--cols));
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.bomb {
+    background-color: red;
+}
+  
+  
+.cell.clicked{
+    background-color: blue;
+    pointer-events: none;
+}
