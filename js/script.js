@@ -5,6 +5,8 @@ const grid = document.getElementById('grid');
 const button = document.getElementById('play');
 const selectedLevel = document.getElementById('levels');
 const scoreElement = document.getElementById('score');
+const explosionSound = document.getElementById('explosion-sound');
+
 
 let rows;
 let cols;
@@ -67,7 +69,10 @@ const endGame = (isWin) => {
   gameEnded = true;
   scoreElement.innerText = 'Score: ' + score;
   const message = isWin ? 'Congratulazioni hai vinto!' : 'Game Over! :(';
-  alert(message);
+  const result = document.getElementById('result');
+  result.innerText = message;
+  explosionSound.play();
+
 };
 
 // Controllo Click del pulsante Play
@@ -105,5 +110,5 @@ button.addEventListener('click', function () {
         grid.appendChild(cell);
     }
   
-    
+
 });
