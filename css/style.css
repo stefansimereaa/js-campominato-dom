@@ -72,8 +72,19 @@ header{
     background-color: red;
 }
   
-  
 .cell.clicked{
     background-color: blue;
     pointer-events: none;
+}
+
+img{
+    max-width: 200px;
+}
+#win{
+    max-width: 100px;
+}
+
+#win, #lose{
+    display: none;
+    transition: opacity 0.5s ease;
 }

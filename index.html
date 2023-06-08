@@ -14,7 +14,8 @@
             <h1>Campo Minato</h1>
             <h3 id="score"></h3>
         </div>
-        <h2 id="result"></h2>
+        <img id="win" src="img/win.png" alt="">
+        <img id="lose" src="img/gameover.png" alt="">
         <div>
         <!-- Selection Difficulty -->
         <select id="levels">
@@ -30,8 +31,9 @@
         <div class="container">
             <audio id="explosion-sound">
                 <source src="audio/mixkit-arcade-chiptune-explosion-1691.wav" type="audio/mpeg">
-              </audio>
-              
+            </audio>
+            <audio id="win-sound" src="audio/success-fanfare-trumpets-6185.mp3"></audio>
+            <audio id="lose-sound" src="audio/negative_beeps-6008.mp3"></audio>
             <div id="grid">
                 
             </div>
